@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8fc">
+<title>TRIANGLE — 三角形をつくらないゲーム</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="logic.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="./"><span class="brand-icon">△</span> TRIANGLE<span class="brand-dot">.</span></a><span class="header-label">ひらめきで、つなごう。</span></header>
+<main>
+<section class="intro"><div class="eyebrow">THE RAMSEY GAME</div><h1>三角形を、つくらない。</h1><p>すべての辺を赤か青に。<br class="mobile-break">ただし、同じ色の三角形はつくらないで。</p></section>
+<nav class="steps" aria-label="ステージ"><span id="step1" class="step active" aria-current="step"><b>01</b> LEVEL 1 <small>K₅</small></span><span class="step-line"></span><span id="step2" class="step"><b>02</b> LEVEL 2 <small>K₆</small></span></nav>
+<section class="game-card" aria-label="ゲーム">
+<div class="board-header"><div><div class="eyebrow" id="level-label">LEVEL 1</div><h2 id="graph-title">5つの頂点、10本の辺。</h2></div><div class="progress-block"><span id="progress-text">10本中 <strong>0</strong>本</span><div class="progress-track"><div id="progress-bar"></div></div></div></div>
+<div class="board-wrap"><svg id="board" viewBox="0 0 600 460" aria-label="完全グラフ K5"></svg><div id="edge-picker" class="edge-picker" hidden><p>塗る辺を選択</p><div id="edge-options"></div><button id="cancel-picker" class="cancel">キャンセル</button></div></div>
+<div id="status" class="status" aria-live="polite"><span class="status-dot"></span>色を選んで、辺をタップ！</div>
+<div class="controls"><div class="palette" role="group" aria-label="塗る色"><button id="red" class="color-button red selected" aria-pressed="true"><span class="swatch"></span>赤<span class="check">✓</span></button><button id="blue" class="color-button blue" aria-pressed="false"><span class="swatch"></span>青<span class="check">✓</span></button></div><button id="restart" class="secondary">↻ はじめから</button><button id="next" class="primary" hidden>LEVEL 2へ <span>→</span></button></div>
+</section>
+<div class="hint"><span>✦</span><p>塗った辺は、あとから色を変えられます。<br>同じ色の三角形ができたら、ゲームオーバー。</p></div>
+</main><footer>THINK. CONNECT. TRY AGAIN.</footer>
+</body></html>
