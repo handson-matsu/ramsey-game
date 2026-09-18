@@ -102,6 +102,7 @@ try {
     method: 'GET',
     mode: 'no-cors',
     cache: 'no-store',
-    credentials: 'omit'
+    credentials: 'omit',
+    keepalive: true,
   }).catch(() => {});
 } catch (_) {}
