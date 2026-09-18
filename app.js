@@ -95,3 +95,13 @@ for (const color of ['red', 'blue']) $(color).onclick = () => {
 $('restart').onclick = () => start(state.n);
 $('next').onclick = () => start(6);
 start(5);
+
+// ページ読み込みごとに1回だけ記録し、失敗してもゲームには影響させない。
+try {
+  fetch('https://script.google.com/macros/s/AKfycbxssCIHsD-N97SHxNC_GN0ihYeC0qy-lb-EY0KmSs6Gnztaph1sITMerLVEnNWOGkYc/exec?app=ramsey-game', {
+    method: 'GET',
+    mode: 'no-cors',
+    cache: 'no-store',
+    credentials: 'omit'
+  }).catch(() => {});
+} catch (_) {}
